@@ -1,9 +1,9 @@
 "use client"
 
 
-import { NavBar } from '../NavBar'
-import { SideBar } from '../SideBar'
-import { Content } from '../Content'
+import { NavBar } from '../ui/NavBar'
+import { SideBar } from '../ui/SideBar'
+import { Content } from '../ui/Content'
 
 export function Home() {
     return (
