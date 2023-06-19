@@ -1,5 +1,5 @@
-import { Logo } from '@/components/Logo'
-import { Avatar } from '@/components/Avatar'
+import { Logo } from './Logo'
+import { Avatar } from './Avatar'
 
 export function SideBar(props: { className?: string }) {
     return (
