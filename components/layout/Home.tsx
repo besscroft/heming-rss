@@ -1,6 +1,5 @@
 "use client"
 
-
 import { NavBar } from '../ui/NavBar'
 import { SideBar } from '../ui/SideBar'
 import { Content } from '../ui/Content'

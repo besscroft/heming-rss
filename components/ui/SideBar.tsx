@@ -7,7 +7,7 @@ import QuizIcon from '@mui/icons-material/Quiz'
 export function SideBar(props: { className?: string, active?: string }) {
     return (
         <div className={`${props.className}` && 'flex flex-col'}>
-            <Logo className={'h-12'} logo={'./favicon.ico'} />
+            <Logo className={'h-12'} logo={'/favicon.ico'} />
             <div className={'h-[calc(100vh-96px)] flex flex-col space-y-4 items-center justify-center'}>
                 <SettingsIcon className={'cursor-pointer'} color={ props.active === 'setting' ? 'primary' : '' } />
                 <RssFeedIcon className={'cursor-pointer'} color={ props.active === 'rssFeed' ? 'primary' : '' } />
