@@ -6,6 +6,8 @@ export function Logo(props: { className?: string, logo: string }) {
             <Image
                 src={props.logo}
                 alt="logo"
+                width={48}
+                height={48}
             />
         </div>
     )
