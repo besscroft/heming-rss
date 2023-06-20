@@ -96,6 +96,7 @@ export function NavList(props: { className?: string, activeItem: string }) {
                                 href={`/feed/${encodeURIComponent(item.url)}`}
                                 className="font-semibold hover:underline"
                                 style={{ textDecoration: 'none', color: 'inherit' }}
+                                key={item.name}
                             >
                                 <ListItemButton sx={{ pl: 2 }}>
                                     <ListItemIcon>
@@ -124,6 +125,7 @@ export function NavList(props: { className?: string, activeItem: string }) {
                                 href={`/feed/${encodeURIComponent(item.url)}`}
                                 className="font-semibold hover:underline"
                                 style={{ textDecoration: 'none', color: 'inherit' }}
+                                key={item.name}
                             >
                                 <ListItemButton sx={{ pl: 2 }}>
                                     <ListItemIcon>

@@ -7,7 +7,7 @@ import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
-import * as dayjs from 'dayjs'
+import { default as dayjs } from 'dayjs'
 import 'dayjs/locale/zh-cn' // 导入本地化语言
 
 dayjs.locale('zh-cn') // 使用本地化语言
@@ -18,9 +18,9 @@ interface FeedProps {
 
 function Feed({ url }: FeedProps) {
     const [items, setItems] = useState<Item[]>([])
-    const [title, setTitle ] = useState('')
-    const [link, setLink ] = useState('')
-    const [description, setDescription ] = useState('')
+    const [title, setTitle ] = useState<any | null>('')
+    const [link, setLink ] = useState<any | null>('')
+    const [description, setDescription ] = useState<any | null>('')
 
     useEffect(() => {
         const parser = new Parser(
@@ -59,7 +59,7 @@ function Feed({ url }: FeedProps) {
             </div>
             <div className={'flex flex-col space-y-4 items-center justify-center w-1/2 m-auto mt-2'}>
                 {items.map((item) => (
-                    <Card sx={{ minWidth: 275 }}>
+                    <Card sx={{ minWidth: 275 }} key={item.guid}>
                         <CardContent>
                             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                                 更新日期 {dayjs(item.pubDate).format('YYYY-MM-DD')}
@@ -68,7 +68,7 @@ function Feed({ url }: FeedProps) {
                                 {item.title}
                             </Typography>
                             <Typography variant="body2">
-                                {item.contentSnippet.slice(0, 100)}
+                                {item.contentSnippet ? item.contentSnippet.slice(0, 100) : ''}
                             </Typography>
                         </CardContent>
                         <CardActions>
